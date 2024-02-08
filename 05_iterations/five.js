@@ -1,4 +1,4 @@
-const coding = ["js", "ruby", "java", "python", "cpp"]   //write this is browser console and see the protoypes
+const coding = ["js", "ruby", "java", "python", "cpp"]   //write this in browser console and see the protoypes
 
 // coding.forEach( function (val){
 //     console.log(val);
