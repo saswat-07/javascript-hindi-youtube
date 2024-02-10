@@ -17,7 +17,7 @@
     <!-- console.dir(document.links[2]) //HTML collections in browser console -->
     <!-- document.getElementById('').innerHTML="<h1>hi</h1>" in browser console -->
     <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
@@ -31,5 +31,62 @@
             <li class="list-item">four</li>
         </ul>
     </div>
+
+    <script>
+        const title = document.getElementById("title")
+        // const title = document.getElementById("title").id
+        // const title = document.getElementById("title").className
+        // const title = document.getElementById("title").getAttribute('id')
+        // const title1 = document.getElementById("title").getAttribute('class')
+        const title1 = document.getElementById("title").setAttribute('class', 'test heading') //setAtteibute overrides the value
+        console.log(title);
+        console.log(title1);
+
+        title.style.backgroundColor = 'green'
+        title.style.padding = "15px"
+        title.style.borderRadius = "15px"
+
+        console.log(title.textContent);
+        console.log(title.innerHTML);
+        console.log(title.innerText);
+
+        const heading = document.getElementsByClassName('heading') //document.getElementsByClassName('heading') see it in browser console
+        console.log(heading);
+        const head = document.querySelector('h2')
+        const input = document.querySelector('input[type="password"]')
+        const myUl = document.querySelector('ul')
+        const myLi = myUl.querySelector('li')
+        // const para = document.querySelector('p:first-child')
+        const title2 = document.querySelector('#title')
+        const title3 = document.querySelector('.heading')
+        console.log(head);
+        console.log(input);
+        console.log(title2);
+        console.log(title3);
+
+        // myLi.style.backgroundColor = "green"
+        myLi.style.padding = "10px"
+        myLi.innerText = "five"
+
+        const allList = document.querySelectorAll('li') //NodeList
+        console.log(allList);
+        console.log(allList[1].innerText);
+        // NodeList and HTML collections is not pure array
+        //allList.style.backgroundColor = 'green' //error
+        allList[0].style.color = 'green' //error
+        allList.forEach(function(l){
+            l.style.backgroundColor = 'lightgreen'
+        })
+
+        const classList = document.getElementsByClassName('list-item')
+        console.log(classList);
+
+        const myConvertedArray = Array.from(classList) //converting HTMLCollection to array, you can do the same to NodeList
+        console.log(myConvertedArray);
+        myConvertedArray.forEach(function(li){
+            li.style.color = 'orange'
+        })
+
+    </script>
 </body>
 </html>
