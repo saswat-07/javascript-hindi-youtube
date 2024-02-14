@@ -15,7 +15,7 @@ if (true) {
 // console.log(c); //problem with var, can be accessed any where, treated as global scope even when declared inside the block scope then also.
 // global scopes are different in node.js vs browser console
 
-// closures
+
 function one(){
     const username = "vijay"
 
